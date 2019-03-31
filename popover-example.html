@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Example of Triggering Bootstrap Popover on Mouseover</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body> 
+        <!--jQuery event handling here-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('[data-toggle="popover"]').popover({
+                    placement : 'right', //could also be top, bottom, left/
+                    trigger : 'hover' // any required jQuery event. Could be click too.
+                });
+            });
+        </script>
+
+        <!-- Styles for the buttons. The colors are from Bootstrap's btn class.-->
+        <style type="text/css">
+            .buttons{
+                margin: 155px 45px;
+            }
+        </style>
+        <div class="buttons">
+            <!-- data-toggle could have any content, but make sure to make the change in the jQuery script. The following markup
+            has no effect on triggering the popover. It's done by jQuery.-->
+            <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fugit!">
+                Popover1
+            </button>
+
+            <button type="button" class="btn btn-warning" data-toggle="popover" title="Popover title" data-content="Lorem ipsum dolor sit, amet consectetur adipisicing elit.">
+                Popover2
+            </button>
+
+            <button type="button" class="btn btn-success" data-toggle="popover" title="Popover title" data-content="Lorem ipsum dolor sit amet.">
+                Popover3
+            </button>
+
+            <button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="The last popover!">
+                Popover4
+            </button>
+
+        </div>
+    </body>
+</html>                            
